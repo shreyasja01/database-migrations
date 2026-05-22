@@ -19,7 +19,7 @@ jobs:
 
       - name: Run Flyway Migration
         run: |
-          & "C:\Program Files\Red Gate\Flyway Desktop\flyway.cmd" -configFiles=conf/flyway-uat.conf migrate
+          & "C:\Program Files\Red Gate\Flyway Desktop\flyway.cmd" -configFile="conf/flyway-uat.conf" migrate
         env:
           FLYWAY_USER: ${{ secrets.FLYWAY_USER }}
           FLYWAY_PASSWORD: ${{ secrets.FLYWAY_PASSWORD }}
