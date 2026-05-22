@@ -13,8 +13,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Check Flyway Version
+        run: '"C:\Program Files\Red Gate\Flyway\flyway.cmd" -v'
+
       - name: Run Flyway Migration
-        run:'"C:\Program Files\Red Gate\Flyway\flyway.cmd" -configFiles=conf/flyway-uat.conf migrate'
+        run: '"C:\Program Files\Red Gate\Flyway\flyway.cmd" -configFiles=conf/flyway-uat.conf migrate'
         env:
           FLYWAY_USER: ${{ secrets.FLYWAY_USER }}
           FLYWAY_PASSWORD: ${{ secrets.FLYWAY_PASSWORD }}
