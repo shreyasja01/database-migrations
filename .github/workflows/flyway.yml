@@ -19,7 +19,11 @@ jobs:
 
       - name: Run Flyway Migration
         run: |
-          & "C:\Program Files\Red Gate\Flyway Desktop\flyway.cmd" -configFile="conf/flyway-uat.conf" migrate
+          & "C:\Program Files\Red Gate\Flyway Desktop\flyway.cmd" migrate `
+          -url="jdbc:mysql://192.168.138.18:3306/shreyas_test" `
+          -user="${env:FLYWAY_USER}" `
+          -password="${env:FLYWAY_PASSWORD}" `
+          -locations="filesystem:migrations"
         env:
           FLYWAY_USER: ${{ secrets.FLYWAY_USER }}
           FLYWAY_PASSWORD: ${{ secrets.FLYWAY_PASSWORD }}
