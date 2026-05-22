@@ -13,9 +13,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Flyway
-        uses: red-gate/setup-flyway@v1
-
       - name: Run Flyway Migration
         run: flyway migrate -configFiles=conf/flyway-uat.toml
         env:
