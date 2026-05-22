@@ -10,18 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Flyway
-        uses: flyway/flyway-action@v1
-        with:
-          version: latest
+        uses: red-gate/setup-flyway@v1
 
       - name: Run Flyway Migration
-        run: |
-          flyway migrate -configFiles=conf/flyway-uat.toml
+        run: flyway migrate -configFiles=conf/flyway-uat.toml
         env:
           FLYWAY_USER: ${{ secrets.FLYWAY_USER }}
           FLYWAY_PASSWORD: ${{ secrets.FLYWAY_PASSWORD }}
