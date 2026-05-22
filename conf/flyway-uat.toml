@@ -1,0 +1,9 @@
+[environments.uat]
+url = "jdbc:mysql://192.168.138.18:3306/shreyas_test"
+user = "cubenetdevdb"
+password = "<!TCube@30>"
+
+[flyway]
+locations = ["filesystem:migrations"]
+
+environment = "uat"
