@@ -21,7 +21,7 @@ jobs:
       - name: Run Flyway Migration
         shell: cmd
         run: |
-          "C:\Program Files\Red Gate\Flyway Desktop\flyway.cmd" migrate -url="jdbc:mysql://192.168.138.18:3306/Shreyas_Test" -user="%FLYWAY_USER%" -password="%FLYWAY_PASSWORD%" -locations="filesystem:migrations"
+          "C:\Program Files\Red Gate\Flyway Desktop\flyway.cmd" migrate -url="jdbc:mysql://192.168.138.18:3306/shreyas_test" -user="%FLYWAY_USER%" -password="%FLYWAY_PASSWORD%" -locations="filesystem:migrations"
         env:
           FLYWAY_USER: ${{ secrets.FLYWAY_USER }}
           FLYWAY_PASSWORD: ${{ secrets.FLYWAY_PASSWORD }}
