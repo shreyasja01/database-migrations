@@ -1,0 +1,2 @@
+ALTER TABLE testemployee
+ADD COLUMN salary DECIMAL(10,2);
