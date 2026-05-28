@@ -8,7 +8,7 @@ BEGIN
     DECLARE v_new_values JSON;
     DECLARE v_changed_columns JSON;
 
-    SET v_old_values = JSON_OBJECT(
+    SET v_old_values = JSON_OBJECT( 
         'Id', OLD.Id,
         'ProcessId', OLD.ProcessId,
         'ApprovalTypeId', OLD.ApprovalTypeId,
