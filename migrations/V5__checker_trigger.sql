@@ -1,5 +1,5 @@
 DROP TRIGGER IF EXISTS trg_after_update_mst_1point1_process_checker;
-DELIMITER $$
+
 CREATE TRIGGER trg_after_update_mst_1point1_process_checker
 AFTER UPDATE ON mst_1point1_process_checker
 FOR EACH ROW
@@ -92,5 +92,4 @@ BEGIN
             NOW()
         );
     END IF;
-END$$
-DELIMITER ;
+END;
