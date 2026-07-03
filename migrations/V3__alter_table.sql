@@ -1,2 +1,0 @@
-ALTER TABLE testemployee ADD COLUMN phone VARCHAR(15);
-ALTER TABLE testemployee ADD COLUMN address VARCHAR(200);
